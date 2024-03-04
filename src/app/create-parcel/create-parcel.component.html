@@ -1,0 +1,32 @@
+<div class="create-container">
+  <div>
+    <li class="error-msg" *ngFor="let message of errorMessages">{{message}}</li>
+  </div>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="sku">SKU:</label>
+      <input type="text" id="sku" [(ngModel)]="parcel.sku" name="sku" required>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="parcel.description" name="description" required>
+    </div>
+    <div>
+      <label for="streetAddress">StreetAddress:</label>
+      <input type="text" id="streetAddress" [(ngModel)]="parcel.streetAddress" name="streetAddress" required>
+    </div>
+    <div>
+      <label for="town">town:</label>
+      <input type="text" id="town" [(ngModel)]="parcel.town" name="town" required>
+    </div>
+    <div>
+      <label for="country">country:</label>
+      <input type="text" id="country" [(ngModel)]="parcel.country" name="country" required>
+    </div>
+    <div>
+      <label for="deliveryDate">Delivery Date:</label>
+      <input type="date" id="deliveryDate" [(ngModel)]="parcel.deliveryDate" name="deliveryDate" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>

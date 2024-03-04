@@ -1,0 +1,52 @@
+<div>
+  @if (isLoadingResults) {
+    <div class="example-loading-shade">
+      @if (isLoadingResults) {
+        <mat-spinner></mat-spinner>
+      }
+    </div>
+  }
+
+  <input matInput class="form-field" [formControl]="countryFilter" placeholder="Country Filter">
+  <input matInput class="form-field" [formControl]="descriptionFilter" placeholder="Description Filter">
+  <div class="example-table-container">
+
+    <table mat-table [dataSource]="data" class="example-table"
+           matSort matSortActive="DELIVERY_DATE" matSortDisableClear matSortDirection="desc">
+      <ng-container matColumnDef="sku">
+        <th mat-header-cell *matHeaderCellDef>Sku</th>
+        <td mat-cell *matCellDef="let row">{{row.sku}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let row">{{row.description}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="streetAddress">
+        <th mat-header-cell *matHeaderCellDef>StreetAddress</th>
+        <td mat-cell *matCellDef="let row">{{row.streetAddress}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="town">
+        <th mat-header-cell *matHeaderCellDef>Town</th>
+        <td mat-cell *matCellDef="let row">{{row.town}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef>Country</th>
+        <td mat-cell *matCellDef="let row">{{row.country}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="deliveryDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header="DELIVERY_DATE" disableClear>
+          Delivery Date
+        </th>
+        <td mat-cell *matCellDef="let row">{{row.deliveryDate | date}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
