@@ -1,4 +1,11 @@
-# Frontend
+# Parcel Frontend App
+
+More info at: https://github.com/kuldarvakker/parcel-backend
+
+<img width="698" alt="Screenshot 2024-03-04 at 23 41 29" src="https://github.com/kuldarvakker/parcel-frontend/assets/47916322/e74ee553-dff2-4975-9717-7e294555434f">
+<img width="673" alt="Screenshot 2024-03-04 at 23 42 48" src="https://github.com/kuldarvakker/parcel-frontend/assets/47916322/17de2c96-0802-4638-9f8a-4584df305b41">
+
+--- 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
